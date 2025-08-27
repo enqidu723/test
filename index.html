@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>琥珀的随机文明大挑战</title>
+    <style>  
+      body {
+        margin: 0;
+      }
+    </style>
+    <script src="https://unpkg.com/lucky-canvas@1.7.25"></script>
+    <style>
+      
+      #my-lucky {
+        margin: 200px auto;
+        width: 500px;
+        height: 500px;
+      }
+
+      .box{
+        display: none;
+        position: absolute;
+        top: 370px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+        height: 200px;
+        background-color: pink;
+        text-align: center;
+        transition: all .5s;
+      }
+      .box h1 {
+        margin-top: 100px;
+      }
+      #close {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+	  <div style="
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 40px;
+    ">
+      <img src="C:\Users\Lenovo\Pictures\Screenshots\OIP-C (1).jpg" alt="KOHAKU" width="408px" height="324px">
+    </div>
+    <div id="my-lucky"></div>
+    <div class="box">
+      <h1 id="text">琥珀想要你玩XXX呢</h1>
+      <p id="close">Exit</p>
+    </div>
+
+    <script style="
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 40px
+    ">
+      let box = document.querySelector('.box')
+      let cl = document.querySelector("#close")
+      let text = document.querySelector('#text')
+
+      const myLucky = new LuckyCanvas.LuckyWheel('#my-lucky', {
+        blocks: [{ padding: '10px', background: '#869cfa' }],
+        prizes: [
+          { background: '#e9e8fe', fonts: [{ text: '腓尼基' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '北条' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '德川' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '文印度' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '武印度' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '高棉' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '闪闪' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '善德' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '世宗' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '大帝' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '亲兵奥' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '文阿拉伯' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '武阿拉伯' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '成吉思汗' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '忽必烈' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '斯基泰' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '墙姐' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '巴比伦' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '忽中' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '文秦' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '武秦' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '武则天' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '朱棣' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '越南' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '居鲁士' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '纳迪尔' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '印尼' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '爱法' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '黑法' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '金法' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '爱英' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '帝英' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '蒸英' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '白英' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '男拜' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '女拜' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '毛子' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '男希腊' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '戈尔贡' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '板鸭' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '北境王' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '瓦良格' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '武德' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '文德' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '瑞典' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '苏格兰' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '葡萄牙' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '图拉真' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '凯撒' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '荷兰' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '匈牙利' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '波兰' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '马其顿' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '高卢' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '马普切' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '玛雅' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '阿兹特克' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '印加' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '克里' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '巴西' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '文美' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '武美' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '林肯' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '加拿大' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '大哥' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '努比亚' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '商埃及' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '文埃及' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '拉二' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '旧马里' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '新马里' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '埃塞' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '男刚果' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '女刚果' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '祖鲁' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '毛利' }], range: 1 },
+          { background: '#e9e8fe', fonts: [{ text: '土澳' }], range: 1 },
+          { background: '#b8c5f2', fonts: [{ text: '自选' }], range: 1 },
+        ],
+        buttons: [
+          { radius: '40%', background: '#617df2' },
+          { radius: '35%', background: '#afc8ff' },
+          {
+            radius: '30%', background: '#869cfa',
+            pointer: true,
+            fonts: [{ text: '开始', top: '-10px' }]
+          },
+        ],
+        start: function() {
+          // 开始游戏
+          myLucky.play()
+          // 假设接口的请求速度是1s
+          setTimeout(_ => {
+            // 停止游戏
+            myLucky.stop()
+          }, 3000)
+        },
+        end: function(prize) { // 游戏停止时触发
+          // alert('琥珀给你选择了: ' + prize.fonts[0].text + ' 哦~')
+          text.innerHTML = '琥珀给你选择了: ' + prize.fonts[0].text + ' 哦~'
+          box.style.display = 'block'
+          
+        }
+      })
+
+      
+      cl.addEventListener('click', ()=>{
+        box.style.display = 'none'
+      })
+    </script>
+    <div style="
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 15px;
+      line-height: 1.7;
+      color: orange; 
+    ">
+    <p>加拿大爽过了</p>
+    <p>印加爽过了</p>
+    <p>武秦爽过了</p>
+    <p>林肯爽过了</p>
+    <p>埃塞爽过了</p>
+    <p>高棉爽过了</p>
+    <p>越南爽过了</p>
+    <p>挪威爽过了</p>
+    <p>西班牙爽过了</p>
+
+    </div>
+    <div style="
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 40p
+    font-size: 12px">
+    <p>这里是琥珀哦，给大家随机列出一个文明喵</p>
+
+    </div>
+  </body>
+</html>
